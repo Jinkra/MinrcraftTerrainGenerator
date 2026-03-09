@@ -1,0 +1,167 @@
+# =============================================
+#     地心世界 (GeoCore World) 配置文件
+#     作者: Jinkra
+#     版本: 1.0.0
+# =============================================
+
+# 世界名称
+world-name: "geocore_world"
+
+# 是否在服务器启动时自动创建世界
+auto-create-world: false
+
+# =============================================
+#           地形生成设置
+# =============================================
+terrain:
+  # 噪声种子（留空则使用随机种子）
+  seed: ""
+
+  # 基岩天顶高度（最大Y坐标）
+  ceiling-height: 315
+
+  # 基岩天顶厚度
+  ceiling-thickness: 5
+
+  # 主地形最高点
+  terrain-max-height: 180
+
+  # 主地形最低点
+  terrain-min-height: 30
+
+  # 底部熔岩湖层高度
+  lava-lake-level: -44
+
+# =============================================
+#           生物群系设置
+# =============================================
+biomes:
+  # 晶化森林
+  crystal-forest:
+    enabled: true
+    rarity: 0.15  # 稀有度，越小越稀有
+
+  # 发光菌落洞穴
+  glowing-mushroom-caves:
+    enabled: true
+    rarity: 0.15
+
+  # 熔岩河流域
+  molten-rivers:
+    enabled: true
+    rarity: 0.12
+
+  # 古文明遗迹区
+  ancient-ruins:
+    enabled: true
+    rarity: 0.10
+
+  # 黑曜石平原
+  obsidian-plains:
+    enabled: true
+    rarity: 0.15
+
+  # 下界渗透区
+  nether-bleed:
+    enabled: true
+    rarity: 0.13
+
+  # 虚空边境
+  void-expanse:
+    enabled: true
+    rarity: 0.20
+
+# =============================================
+#           结构生成设置
+# =============================================
+structures:
+  # 太空电梯
+  space-elevator:
+    enabled: true
+    # 电梯中心坐标（区块坐标）
+    chunk-x: 0
+    chunk-z: 0
+
+  # 巨型光源
+  mega-light-source:
+    enabled: true
+    chunk-x: 10
+    chunk-z: 10
+
+  # 古文明遗迹
+  ancient-ruins:
+    enabled: true
+    spawn-chance: 0.02  # 每区块生成概率
+
+  # 发光菌落群
+  glowing-colonies:
+    enabled: true
+    spawn-chance: 0.10
+
+  # 大型水晶
+  large-crystals:
+    enabled: true
+    spawn-chance: 0.05
+
+  # 液态金属池
+  metal-pools:
+    enabled: true
+    spawn-chance: 0.03
+
+# =============================================
+#           异步生成设置
+# =============================================
+async:
+  # 最大并发任务数
+  max-concurrent-tasks: 4
+
+  # 每tick处理的区块数
+  chunks-per-tick: 2
+
+  # 任务超时时间（毫秒）
+  task-timeout-ms: 30000
+
+# =============================================
+#           性能优化设置
+# =============================================
+performance:
+  # 是否启用区块生成缓存
+  enable-chunk-cache: true
+
+  # 缓存大小（区块数量）
+  cache-size: 256
+
+  # 是否启用噪声预计算
+  precompute-noise: true
+
+# =============================================
+#           世界规则设置
+# =============================================
+world-rules:
+  # 是否禁用昼夜循环
+  disable-daylight-cycle: true
+
+  # 固定时间（-1表示不固定）
+  fixed-time: 18000
+
+  # 是否禁用天气
+  disable-weather: true
+
+  # 怪物生成
+  mob-spawning: true
+
+  # 难度（peaceful, easy, normal, hard）
+  difficulty: "normal"
+
+# =============================================
+#           调试设置
+# =============================================
+debug:
+  # 是否启用调试模式
+  enabled: false
+
+  # 是否显示区块生成时间
+  show-chunk-gen-time: false
+
+  # 是否显示生物群系边界
+  show-biome-borders: false

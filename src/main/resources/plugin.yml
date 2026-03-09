@@ -1,0 +1,13 @@
+name: Underworld
+version: '1.0-SNAPSHOT'
+main: Thexiaoyu.underworld.Underworld
+api-version: '1.21'
+authors: [ Thexiaoyu ]
+load: STARTUP
+
+commands:
+  geocore:
+    description: 地心世界主命令
+    usage: /geocore <create|tp|biome|info|pregen|reload>
+    aliases: [gc, geocoreworld]
+    permission: geocore.use
